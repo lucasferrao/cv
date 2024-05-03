@@ -1,0 +1,27 @@
+{
+  "name": "lucasferrao",
+  "version": "1.0.0",
+  "description": "My life resume.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasferrao/cv.git"
+  },
+  "keywords": [
+    "lf"
+  ],
+  "author": "lucasferrao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucasferrao/cv/issues"
+  },
+  "homepage": "https://github.com/lucasferrao/cv#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.19.2"
+  }
+}
