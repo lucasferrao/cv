@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser');
 
 //Make the <Folder Name> accessible
 app.use(express.static(__dirname + '/css'));
+app.use(express.static(__dirname + '/images'));
 
 //App running on localhost:8080 || 127.0.0.1:8080
 app.listen(port, function(err){
@@ -38,11 +39,17 @@ app.listen(port, function(err){
     next(); // <-- important!
   });
 
-  //Routes path for each controller
+  //Routes' path for each controller
   const homeRouter = require('./routes/main');
   app.use('/', homeRouter);
   const bioRouter = require('./routes/main');
   app.use('/biography', bioRouter);
+  const educationRouter = require('./routes/main');
+  app.use('/education', educationRouter);
+  const skillsRouter = require('./routes/main');
+  app.use('/skills', skillsRouter);
+  const contactRouter = require('./routes/main');
+  app.use('/contact', contactRouter);
   
   //Export modules & incorporate loader.js file
   module.exports = app;

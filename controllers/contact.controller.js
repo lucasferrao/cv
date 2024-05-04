@@ -1,12 +1,12 @@
-//Biography controller variables
+//Routes main variables
 const path = require('path');
 const fs = require('fs').promises; //Use directly promises to simplify
 
-//Get method to send biography's content
+//Get method to send home's content
 exports.index = async (req, res) => {
     try {
         //Path
-        const filePath = path.join(__dirname, '../views/bio.html');
+        const filePath = path.join(__dirname, '../views/contact.html');
         const html = await fs.readFile(filePath, 'utf8');
         res.send(html); //Send html file
     } catch (error) {
