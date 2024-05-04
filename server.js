@@ -5,6 +5,8 @@ const express = require('express'); //express: routing
 const app = express();
 const cookieParser = require('cookie-parser');
 
+app.use(express.static(__dirname + '/css'));
+
 //App running on localhost:8080 || 127.0.0.1:8080
 app.listen(port, function(err){
     if (!err) {
@@ -13,6 +15,8 @@ app.listen(port, function(err){
       console.log(err);
     }
   });
+
+  
   
   app.use(cookieParser());
   app.use(function (req, res, next) {
