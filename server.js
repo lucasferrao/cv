@@ -1,10 +1,10 @@
-const port = process.env.PORT || 8080;
-
 //Configure the server
+const port = process.env.PORT || 8080;
 const express = require('express'); //express: routing
 const app = express();
 const cookieParser = require('cookie-parser');
 
+//Make the <Folder Name> accessible
 app.use(express.static(__dirname + '/css'));
 
 //App running on localhost:8080 || 127.0.0.1:8080
@@ -17,7 +17,7 @@ app.listen(port, function(err){
   });
 
   
-  
+  //Implement Cookies
   app.use(cookieParser());
   app.use(function (req, res, next) {
     // check if client sent cookie
@@ -38,9 +38,9 @@ app.listen(port, function(err){
     next(); // <-- important!
   });
 
+  //Routes path for each controller
   const homeRouter = require('./routes/main');
   app.use('/', homeRouter);
-
   const bioRouter = require('./routes/main');
   app.use('/biography', bioRouter);
   

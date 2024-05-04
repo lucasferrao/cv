@@ -1,6 +1,8 @@
+//Biography controller variables
 const path = require('path');
 const fs = require('fs').promises; // Usar promises diretamente para simplificação
 
+//Get method to send biography's content
 exports.index = async (req, res) => {
     try {
         // Garantir que o caminho está correto, considerando que a pasta views está no mesmo nível que controllers
