@@ -12,36 +12,3 @@ exports.index = async (req, res) => {
         res.status(500).send('Erro ao carregar a página');
     }
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/** const path = require('path');
-const fs = require('fs');
-const { promisify } = require('util');
-const readFile = promisify(fs.readFile);
-
-exports.index = async (req, res) => {
-    try {
-        const htmlPath = path.join(__dirname, '../views/index.html');
-        const html = await readFile(htmlPath, 'utf8');
-        res.send(html);
-    } catch (error) {
-        res.status(500).send('Erro ao ler o arquivo');
-    }
-};*/

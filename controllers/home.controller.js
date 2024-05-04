@@ -12,5 +12,3 @@ exports.index = async (req, res) => {
         res.status(500).send('Erro ao carregar a página');
     }
 };
-
-//module.exports = { index };
