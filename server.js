@@ -7,6 +7,8 @@ const cookieParser = require('cookie-parser');
 //Make the <Folder Name> accessible
 app.use(express.static(__dirname + '/css'));
 app.use(express.static(__dirname + '/images'));
+app.use(express.static(__dirname + '/utils'));
+app.use(express.static(__dirname + '/views'));
 
 //App running on localhost:8080 || 127.0.0.1:8080
 app.listen(port, function(err){
@@ -39,7 +41,7 @@ app.listen(port, function(err){
     next(); // <-- important!
   });
 
-  //Routes' path for each controller
+  //Routes' path for each controller - TODO: colocar os construtores no início 
   const homeRouter = require('./routes/main');
   app.use('/', homeRouter);
   const bioRouter = require('./routes/main');
